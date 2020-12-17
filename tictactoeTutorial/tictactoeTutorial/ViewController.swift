@@ -13,7 +13,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func buSelectEvent(_ sender: UIButton) {
+        let buSelect = sender
+        print(buSelect.tag)
+    }
+    
 
 }
 
