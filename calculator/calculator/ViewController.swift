@@ -30,13 +30,20 @@ class ViewController: UIViewController {
     
     
     @IBAction func buAC(_ sender: Any) {
-        
+        numberViewArea.text = "0"
+        newOperation = true
     }
     
     @IBAction func buPlusMinus(_ sender: Any) {
+        var textNumber = String(numberViewArea.text!)
+        textNumber = "-" + textNumber
+        numberViewArea.text = textNumber
     }
     
     @IBAction func buPercent(_ sender: Any) {
+        var number1 = Double(numberViewArea.text!)
+        number1 = number1! / 100.0
+        numberViewArea.text = String(number1!)
     }
     
     
@@ -93,6 +100,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func buDot(_ sender: Any) {
+        addNumberToInput(number: ".")
     }
     
     
