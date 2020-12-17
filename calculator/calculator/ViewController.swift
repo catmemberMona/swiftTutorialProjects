@@ -53,33 +53,57 @@ class ViewController: UIViewController {
     
     
     var op = "+"
-    var number1:Double?
+    var number1:Double? = 0.0
+    var continuousOp = false
     
     @IBAction func buDiv(_ sender: Any) {
+        if number1! == 0.0 {
+            number1 = Double(numberViewArea.text!)
+            newOperation = true
+        } else {
+            continuousOp = true
+            buEqual(self)
+        }
         op = "/"
-        number1 = Double(numberViewArea.text!)
-        newOperation = true
     }
     
     
     @IBAction func buMult(_ sender: Any) {
+        if number1! == 0.0 {
+            number1 = Double(numberViewArea.text!)
+            newOperation = true
+        } else {
+            continuousOp = true
+            buEqual(self)
+        }
         op = "*"
-        number1 = Double(numberViewArea.text!)
-        newOperation = true
     }
     
     
     @IBAction func buSub(_ sender: Any) {
+        if number1! == 0.0 {
+            number1 = Double(numberViewArea.text!)
+            newOperation = true
+        } else {
+            continuousOp = true
+            buEqual(self)
+        }
         op = "-"
-        number1 = Double(numberViewArea.text!)
-        newOperation = true
+       
     }
     
     
     @IBAction func buAdd(_ sender: Any) {
+        
+        if number1! == 0.0 {
+            number1 = Double(numberViewArea.text!)
+            newOperation = true
+        } else {
+            continuousOp = true
+            buEqual(self)
+        }
         op = "+"
-        number1 = Double(numberViewArea.text!)
-        newOperation = true
+        
     }
     
     
@@ -103,9 +127,21 @@ class ViewController: UIViewController {
         
         if wholeNum[wholeNum.index(wholeNum.endIndex, offsetBy: -2)] == "." && wholeNum[wholeNum.index(wholeNum.endIndex, offsetBy: -1)] == "0"{
             let range = wholeNum.startIndex..<wholeNum.index(wholeNum.endIndex, offsetBy:  -2)
-            numberViewArea.text = String(wholeNum[range])
+            
+            if continuousOp {
+                number1 = Double(wholeNum[range])
+                continuousOp = false
+            } else {
+                numberViewArea.text = String(wholeNum[range])
+            }
+            
         } else {
-            numberViewArea.text = wholeNum 
+            if continuousOp {
+                number1 = Double(wholeNum)
+                continuousOp = false
+            } else {
+                numberViewArea.text = wholeNum
+            }
         }
         
         newOperation = true
