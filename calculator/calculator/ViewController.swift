@@ -36,7 +36,12 @@ class ViewController: UIViewController {
     
     @IBAction func buPlusMinus(_ sender: Any) {
         var textNumber = String(numberViewArea.text!)
-        textNumber = "-" + textNumber
+        if textNumber[textNumber.startIndex] == "-" {
+            let range = textNumber.index(after: textNumber.startIndex)..<textNumber.endIndex
+            textNumber = String(textNumber[range])
+        } else {
+            textNumber = "-" + textNumber
+        }
         numberViewArea.text = textNumber
     }
     
