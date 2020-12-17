@@ -44,6 +44,9 @@ class ViewController: UIViewController {
     var number1:Double?
     
     @IBAction func buDiv(_ sender: Any) {
+        op = "/"
+        number1 = Double(numberViewArea.text!)
+        newOperation = true
     }
     
     
@@ -55,10 +58,16 @@ class ViewController: UIViewController {
     
     
     @IBAction func buSub(_ sender: Any) {
+        op = "-"
+        number1 = Double(numberViewArea.text!)
+        newOperation = true
     }
     
     
     @IBAction func buAdd(_ sender: Any) {
+        op = "+"
+        number1 = Double(numberViewArea.text!)
+        newOperation = true
     }
     
     
@@ -68,6 +77,12 @@ class ViewController: UIViewController {
         switch op {
         case "*":
             results = number1! * number2!
+        case "/":
+            results = number1! / number2!
+        case "-":
+            results = number1! - number2!
+        case "+":
+            results = number1! + number2!
         default:
             results = 0.0
         }
