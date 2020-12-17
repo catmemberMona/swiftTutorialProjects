@@ -16,10 +16,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    var newOperation = true
     func addNumberToInput(number:String){
         var textNumber = String(numberViewArea.text!)
+        if newOperation {
+            textNumber = ""
+            newOperation = false
+        }
         textNumber += number
         numberViewArea.text = textNumber
+        
     }
     
     
@@ -33,11 +39,18 @@ class ViewController: UIViewController {
     @IBAction func buPercent(_ sender: Any) {
     }
     
+    
+    var op = "+"
+    var number1:Double?
+    
     @IBAction func buDiv(_ sender: Any) {
     }
     
     
     @IBAction func buMult(_ sender: Any) {
+        op = "*"
+        number1 = Double(numberViewArea.text!)
+        newOperation = true
     }
     
     
@@ -50,6 +63,16 @@ class ViewController: UIViewController {
     
     
     @IBAction func buEqual(_ sender: Any) {
+        let number2 = Double(numberViewArea.text!)
+        var results:Double?
+        switch op {
+        case "*":
+            results = number1! * number2!
+        default:
+            results = 0.0
+        }
+        numberViewArea.text = String(results!)
+        newOperation = true
     }
     
     
