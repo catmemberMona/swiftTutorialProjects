@@ -114,7 +114,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func buDot(_ sender: Any) {
-        addNumberToInput(number: ".")
+        let textNumber = numberViewArea.text!
+        if !textNumber.contains(".") || newOperation {
+            addNumberToInput(number: ".")
+        }
     }
     
     
