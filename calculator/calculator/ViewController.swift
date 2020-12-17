@@ -36,7 +36,12 @@ class ViewController: UIViewController {
     
     @IBAction func buPlusMinus(_ sender: Any) {
         var textNumber = String(numberViewArea.text!)
-        textNumber = "-" + textNumber
+        if textNumber[textNumber.startIndex] == "-" {
+            let range = textNumber.index(after: textNumber.startIndex)..<textNumber.endIndex
+            textNumber = String(textNumber[range])
+        } else {
+            textNumber = "-" + textNumber
+        }
         numberViewArea.text = textNumber
     }
     
@@ -93,14 +98,26 @@ class ViewController: UIViewController {
         default:
             results = 0.0
         }
-        numberViewArea.text = String(results!)
+        
+        let wholeNum = String(results!)
+        
+        if wholeNum[wholeNum.index(wholeNum.endIndex, offsetBy: -2)] == "." && wholeNum[wholeNum.index(wholeNum.endIndex, offsetBy: -1)] == "0"{
+            let range = wholeNum.startIndex..<wholeNum.index(wholeNum.endIndex, offsetBy:  -2)
+            numberViewArea.text = String(wholeNum[range])
+        } else {
+            numberViewArea.text = wholeNum 
+        }
+        
         newOperation = true
     }
     
     
     
     @IBAction func buDot(_ sender: Any) {
-        addNumberToInput(number: ".")
+        let textNumber = numberViewArea.text!
+        if !textNumber.contains(".") || newOperation {
+            addNumberToInput(number: ".")
+        }
     }
     
     
