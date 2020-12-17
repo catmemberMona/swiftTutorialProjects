@@ -93,7 +93,16 @@ class ViewController: UIViewController {
         default:
             results = 0.0
         }
-        numberViewArea.text = String(results!)
+        
+        let wholeNum = String(results!)
+        
+        if wholeNum[wholeNum.index(wholeNum.endIndex, offsetBy: -2)] == "." && wholeNum[wholeNum.index(wholeNum.endIndex, offsetBy: -1)] == "0"{
+            let range = wholeNum.startIndex..<wholeNum.index(wholeNum.endIndex, offsetBy:  -2)
+            numberViewArea.text = String(wholeNum[range])
+        } else {
+            numberViewArea.text = wholeNum 
+        }
+        
         newOperation = true
     }
     
