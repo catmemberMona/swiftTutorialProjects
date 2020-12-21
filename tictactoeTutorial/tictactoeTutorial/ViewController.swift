@@ -63,17 +63,28 @@ class ViewController: UIViewController {
                 break
             }
         }
-        if contains == true {
-            winner = ActivePlayer
-            if winner == 1 {
-                // display message
-                print("You won!")
-            } else {
-                print("You lost")
-            }
-            // freeze game & ask for rematch
-        }
         
+        var msg = ""
+        if contains || player.count > 4 {
+            
+            if !contains {
+                msg = "It's a tie"
+            } else {
+                winner = ActivePlayer
+                
+                if winner == 1 {
+                    // display message
+                    msg = "You won!"
+                } else if winner == 2 {
+                    msg = "You lost"
+                }
+            }
+            
+            // freeze game & ask for rematch
+            let alert = UIAlertController(title: msg, message: "Play Again", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
 
         
     }
