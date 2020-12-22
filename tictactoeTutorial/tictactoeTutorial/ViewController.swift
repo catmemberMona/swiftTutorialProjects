@@ -44,7 +44,9 @@ class ViewController: UIViewController {
             print("where is the error place 2")
             ActivePlayer = 2
             print("where is the error place 3")
-            AutoPlay()
+            if player1.count < 5 {
+                AutoPlay()
+            }
             print("where is the error place 4", player1, player2)
             
         } else {
