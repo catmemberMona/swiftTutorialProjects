@@ -161,6 +161,17 @@
                             <constraint firstItem="dyt-j2-epu" firstAttribute="top" secondItem="Dmg-DR-q0z" secondAttribute="bottom" constant="5" id="xHl-PS-vyo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bu1" destination="gxw-hd-sIb" id="ccB-5w-y2R"/>
+                        <outlet property="bu2" destination="4KX-Jl-FZD" id="WXx-Yy-SIT"/>
+                        <outlet property="bu3" destination="kC2-Dc-rOB" id="A7B-Ki-pL5"/>
+                        <outlet property="bu4" destination="r5b-E1-qPh" id="3om-cq-c1q"/>
+                        <outlet property="bu5" destination="eYQ-d1-65v" id="NiU-3P-Wnq"/>
+                        <outlet property="bu6" destination="Dmg-DR-q0z" id="vc1-fP-EbO"/>
+                        <outlet property="bu7" destination="9YR-Pa-NF9" id="S9w-AZ-RLi"/>
+                        <outlet property="bu8" destination="s0u-sg-y4B" id="OCe-dT-PjV"/>
+                        <outlet property="bu9" destination="dyt-j2-epu" id="t6y-UZ-xhK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
