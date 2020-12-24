@@ -1,0 +1,6 @@
+framework module Pods_pockemonGuidedProj {
+  umbrella header "Pods-pockemonGuidedProj-umbrella.h"
+
+  export *
+  module * { export * }
+}
