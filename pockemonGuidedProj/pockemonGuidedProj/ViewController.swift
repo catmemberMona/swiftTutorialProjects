@@ -8,7 +8,7 @@
 import UIKit
 import GoogleMaps
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     var mapView: GMSMapView!
     let locationManager = CLLocationManager()
     var listPockemon = [Pockemon]()
@@ -19,10 +19,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         LoadPockemons()
         // Create a GMSCameraPosition that tells the map to display the
         // coordinate
-        let camera = GMSCameraPosition.camera(withLatitude: 40.7, longitude: -74.0, zoom: 10.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 40.7, longitude: -74.0, zoom: 14.0)
         // view shown at camera position
         mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         self.view.addSubview(mapView)
+        self.mapView.delegate = self
         
         // get user location permission
         self.locationManager.requestAlwaysAuthorization()
@@ -33,9 +34,36 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
-
+    }
+    
+    // add new pockemon to the map/screen by tapping on location
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        //        coordinate is where i tap on the screen/map
+        self.listPockemon.append(Pockemon(latitude: coordinate.latitude, longitude: coordinate.longitude, image: "charmander", name: "Charmander", des: "Charmander lives here", power: 200.0))
         
+        var index = 0
+        for pockemon in listPockemon {
+           
+            if pockemon.isCatch == false {
+                let markerPockemon = GMSMarker()
+                markerPockemon.position = CLLocationCoordinate2D(latitude: pockemon.latitiude!, longitude: pockemon.longitude!)
+                markerPockemon.title = pockemon.name!
+                markerPockemon.snippet = "\(pockemon.des!) has power level \(pockemon.power!)"
+                markerPockemon.icon = UIImage(named: pockemon.image!)
+                markerPockemon.map = self.mapView
+                
+                // check location to catch pockemon
+                if (Double(myLocation.latitude).roundTo(places: 4) ==
+                        Double(pockemon.latitiude!).roundTo(places: 4)
+                        && Double(myLocation.longitude).roundTo(places: 4) == Double(pockemon.longitude!).roundTo(places: 4)){
+                    listPockemon[index].isCatch = true
+                    AlertDialog(pockemonPower: pockemon.power!)
+                    
+                }
+                index += 1
+            }
         
+        }
     }
     
     var myLocation = CLLocationCoordinate2D(latitude: 0, longitude: 0)
@@ -73,7 +101,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 }
                 index += 1
             }
-            
         }
         
         
