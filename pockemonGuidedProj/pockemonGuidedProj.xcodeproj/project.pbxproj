@@ -14,6 +14,7 @@
 		F9252CEA2593EB2E005B5834 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9252CE82593EB2E005B5834 /* Main.storyboard */; };
 		F9252CEC2593EB2E005B5834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9252CEB2593EB2E005B5834 /* Assets.xcassets */; };
 		F9252CEF2593EB2E005B5834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9252CED2593EB2E005B5834 /* LaunchScreen.storyboard */; };
+		F92EF9FA25A68BF0002F6ADE /* Pockemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EF9F925A68BF0002F6ADE /* Pockemon.swift */; };
 		F9B03AC62595425A0080A2C4 /* GMS-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9B03AC52595425A0080A2C4 /* GMS-info.plist */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		F9252CEB2593EB2E005B5834 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9252CEE2593EB2E005B5834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9252CF02593EB2E005B5834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F92EF9F925A68BF0002F6ADE /* Pockemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pockemon.swift; sourceTree = "<group>"; };
 		F9B03AC52595425A0080A2C4 /* GMS-info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GMS-info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 				F9252CEB2593EB2E005B5834 /* Assets.xcassets */,
 				F9252CED2593EB2E005B5834 /* LaunchScreen.storyboard */,
 				F9252CF02593EB2E005B5834 /* Info.plist */,
+				F92EF9F925A68BF0002F6ADE /* Pockemon.swift */,
 			);
 			path = pockemonGuidedProj;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9252CE72593EB2D005B5834 /* ViewController.swift in Sources */,
+				F92EF9FA25A68BF0002F6ADE /* Pockemon.swift in Sources */,
 				F9252CE32593EB2D005B5834 /* AppDelegate.swift in Sources */,
 				F9252CE52593EB2D005B5834 /* SceneDelegate.swift in Sources */,
 			);
