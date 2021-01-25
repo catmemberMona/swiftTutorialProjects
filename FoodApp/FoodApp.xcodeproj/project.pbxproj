@@ -13,6 +13,10 @@
 		F9FCA6B925BE203700BC4F0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FCA6B725BE203700BC4F0B /* Main.storyboard */; };
 		F9FCA6BB25BE203700BC4F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9FCA6BA25BE203700BC4F0B /* Assets.xcassets */; };
 		F9FCA6BE25BE203700BC4F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FCA6BC25BE203700BC4F0B /* LaunchScreen.storyboard */; };
+		F9FCA6D325BE34D600BC4F0B /* CVCellFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCA6D225BE34D600BC4F0B /* CVCellFood.swift */; };
+		F9FCA6D625BE371E00BC4F0B /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCA6D525BE371E00BC4F0B /* Food.swift */; };
+		F9FCA6D925BE39A500BC4F0B /* Foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9FCA6D825BE39A500BC4F0B /* Foods.plist */; };
+		F9FCA6DD25BE68D400BC4F0B /* VCFoodDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCA6DC25BE68D400BC4F0B /* VCFoodDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		F9FCA6BA25BE203700BC4F0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9FCA6BD25BE203700BC4F0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9FCA6BF25BE203700BC4F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9FCA6D225BE34D600BC4F0B /* CVCellFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCellFood.swift; sourceTree = "<group>"; };
+		F9FCA6D525BE371E00BC4F0B /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		F9FCA6D825BE39A500BC4F0B /* Foods.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Foods.plist; sourceTree = "<group>"; };
+		F9FCA6DC25BE68D400BC4F0B /* VCFoodDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFoodDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				F9FCA6B325BE203700BC4F0B /* SceneDelegate.swift */,
 				F9FCA6B525BE203700BC4F0B /* ViewController.swift */,
 				F9FCA6B725BE203700BC4F0B /* Main.storyboard */,
+				F9FCA6DC25BE68D400BC4F0B /* VCFoodDetail.swift */,
+				F9FCA6D825BE39A500BC4F0B /* Foods.plist */,
+				F9FCA6D525BE371E00BC4F0B /* Food.swift */,
+				F9FCA6D225BE34D600BC4F0B /* CVCellFood.swift */,
 				F9FCA6BA25BE203700BC4F0B /* Assets.xcassets */,
 				F9FCA6BC25BE203700BC4F0B /* LaunchScreen.storyboard */,
 				F9FCA6BF25BE203700BC4F0B /* Info.plist */,
@@ -126,6 +138,7 @@
 			files = (
 				F9FCA6BE25BE203700BC4F0B /* LaunchScreen.storyboard in Resources */,
 				F9FCA6BB25BE203700BC4F0B /* Assets.xcassets in Resources */,
+				F9FCA6D925BE39A500BC4F0B /* Foods.plist in Resources */,
 				F9FCA6B925BE203700BC4F0B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9FCA6D325BE34D600BC4F0B /* CVCellFood.swift in Sources */,
 				F9FCA6B625BE203700BC4F0B /* ViewController.swift in Sources */,
+				F9FCA6D625BE371E00BC4F0B /* Food.swift in Sources */,
+				F9FCA6DD25BE68D400BC4F0B /* VCFoodDetail.swift in Sources */,
 				F9FCA6B225BE203700BC4F0B /* AppDelegate.swift in Sources */,
 				F9FCA6B425BE203700BC4F0B /* SceneDelegate.swift in Sources */,
 			);
