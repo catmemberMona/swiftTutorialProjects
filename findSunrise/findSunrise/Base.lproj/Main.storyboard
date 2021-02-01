@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="findSunrise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location: City, State" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xcp-Io-lCZ">
+                                <rect key="frame" x="109.5" y="436" width="195.5" height="34"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Sunrise Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thy-Pd-3PH">
+                                <rect key="frame" x="41.5" y="117" width="331.5" height="25.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="thy-Pd-3PH" secondAttribute="height" multiplier="130:10" id="Qjl-yV-Hiz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gj-JC-mlW">
+                                <rect key="frame" x="155.5" y="490" width="103" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3gj-JC-mlW" secondAttribute="height" multiplier="127:37" id="stB-3m-CQV"/>
+                                </constraints>
+                                <state key="normal" title="Look Up"/>
+                                <connections>
+                                    <action selector="buLookUpTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p5E-ow-goX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAu-Kd-lty">
+                                <rect key="frame" x="41.5" y="162.5" width="331.5" height="97.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aAu-Kd-lty" secondAttribute="height" multiplier="136:40" id="6Dm-TY-Typ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="3gj-JC-mlW" firstAttribute="top" secondItem="xcp-Io-lCZ" secondAttribute="bottom" constant="20" id="Da1-C2-tST"/>
+                            <constraint firstItem="xcp-Io-lCZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="J6e-z9-rzA"/>
+                            <constraint firstItem="3gj-JC-mlW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TjL-a9-nU7"/>
+                            <constraint firstItem="aAu-Kd-lty" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bKx-7c-tgF"/>
+                            <constraint firstItem="xcp-Io-lCZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="epn-hI-meW"/>
+                            <constraint firstItem="thy-Pd-3PH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jWo-4L-8H8"/>
+                            <constraint firstItem="thy-Pd-3PH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="tJI-u4-aRW"/>
+                            <constraint firstItem="aAu-Kd-lty" firstAttribute="leading" secondItem="thy-Pd-3PH" secondAttribute="leading" id="wMG-Mr-3Mr"/>
+                            <constraint firstItem="aAu-Kd-lty" firstAttribute="top" secondItem="thy-Pd-3PH" secondAttribute="bottom" constant="20" id="yEy-RI-Q9c"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tvShowTime" destination="aAu-Kd-lty" id="lp6-iS-1N8"/>
+                        <outlet property="txtLocation" destination="xcp-Io-lCZ" id="At1-UO-Kl7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="528.98550724637687" y="89.732142857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
