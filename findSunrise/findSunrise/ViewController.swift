@@ -32,35 +32,51 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buLookUpTime(_ sender: Any) {
-        let url = "http://api.openweathermap.org/data/2.5/weather?zip=11356,us&appid=\(apiKey)"
+       
+        let url = "http://api.openweathermap.org/data/2.5/weather?zip=\(txtLocation.text!),us&appid=\(apiKey)"
+        tvShowTime.text = ""
         
-        do {
-            // get data from url
-            let appURL = URL(string: url)
-            let data = try Data(contentsOf: appURL! as URL)
-            let json = try JSONSerialization.jsonObject(with: data) as! [String: Any]
-            
-            // get the sunrise time from the json
-            let locationInfo = json["sys"] as! [String: Any]
-            let sunriseInSeconds = locationInfo["sunrise"] as! Int
-            
-            // convert the unix time to the date
-            let date = Date(timeIntervalSince1970: Double(sunriseInSeconds))
-            
-            // get the hour and minutes from the date
-            let hour = Calendar.current.component(.hour, from: date)
-            let minute = Calendar.current.component(.minute, from: date)
-            
-            // make minutes look nice in display - single digit or double digit
-            if (minute < 10){
-                tvShowTime.text = "\(hour):0\(minute)AM"
-            } else {
-                tvShowTime.text = "\(hour):\(minute)AM"
-            }
+        DispatchQueue.global().async {
+            do {
+                // get data from url
+                let appURL = URL(string: url)
+                let data = try Data(contentsOf: appURL! as URL)
+                let json = try JSONSerialization.jsonObject(with: data) as! [String: Any]
+                
+                // get the sunrise time from the json
+                let locationInfo = json["sys"] as! [String: Any]
+                let sunriseInSeconds = locationInfo["sunrise"] as! Int
+                
+                // convert the unix time to the date
+                let date = Date(timeIntervalSince1970: Double(sunriseInSeconds))
+                
+                // get the hour and minutes from the date
+                let hour = Calendar.current.component(.hour, from: date)
+                let minute = Calendar.current.component(.minute, from: date)
+                
+                // make minutes look nice in display - single digit or double digit
+                
+                DispatchQueue.main.async {
+                    if (minute < 10){
+                        self.tvShowTime.text = "\(hour):0\(minute)AM"
+                    } else {
+                        self.tvShowTime.text = "\(hour):\(minute)AM"
+                    }
+                }
+           
 
-        } catch {
-            tvShowTime.text = "Cannot reach server"
+            } catch {
+                
+                DispatchQueue.main.async {
+                    self.tvShowTime.text = "Not Found"
+                }
+            }
+            
+            DispatchQueue.main.async {
+                self.txtLocation.text = ""
+            }
         }
+        
     }
     
 }
