@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Coffee</string>
+		<key>des</key>
+		<string>Enjoy this warm, freshly brewed kettle of coffee. We also sell cubed sugar for those with a sweet tooth.</string>
+		<key>image</key>
+		<string>coffee_pot</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Espresso</string>
+		<key>des</key>
+		<string>Helps keep you focused. Add some milk and sugar for a customized drink. </string>
+		<key>image</key>
+		<string>espresso</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>French Fries</string>
+		<key>des</key>
+		<string>Fried potato sticks.</string>
+		<key>image</key>
+		<string>french_fries</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Honey</string>
+		<key>des</key>
+		<string>So sweet. From real bees.</string>
+		<key>image</key>
+		<string>honey</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Strawberry Ice Cream</string>
+		<key>des</key>
+		<string>It&apos;s even healthier than regular vanilla ice cream.</string>
+		<key>image</key>
+		<string>strawberry_ice_cream</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sugar Cubes</string>
+		<key>des</key>
+		<string>Small blocks of sugar. Great without a spoon.</string>
+		<key>image</key>
+		<string>sugar_cubes</string>
+	</dict>
+</array>
+</plist>
