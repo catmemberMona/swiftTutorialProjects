@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyNotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHt-9V-bhx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Add Note" id="BcD-Vr-Cm1">
+                                        <barButtonItem key="rightBarButtonItem" title="All Notes" id="xyK-wA-Iwq"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jkM-k2-kg7">
+                                <rect key="frame" x="15" y="118" width="384" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTC-Cb-ds5">
+                                <rect key="frame" x="314" y="602" width="80" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="1Ib-Vm-HSd"/>
+                                    <constraint firstAttribute="height" constant="30" id="o4k-Ls-dSb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.13170170502438702" green="0.5461058937823835" blue="0.31874463388773594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="StB-Uy-eeG"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J0t-gZ-yXT">
+                                <rect key="frame" x="15" y="187" width="384" height="350"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="J0t-gZ-yXT" secondAttribute="height" multiplier="384:350" id="2d9-P3-81k"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.70295146077978532" blue="0.44123930827877489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jkM-k2-kg7" secondAttribute="trailing" constant="15" id="375-XO-un4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J0t-gZ-yXT" secondAttribute="trailing" constant="15" id="5Ri-EC-d99"/>
+                            <constraint firstItem="jkM-k2-kg7" firstAttribute="top" secondItem="eHt-9V-bhx" secondAttribute="bottom" constant="30" id="AmS-hh-E2H"/>
+                            <constraint firstItem="eHt-9V-bhx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FwZ-e4-ZlP"/>
+                            <constraint firstItem="jkM-k2-kg7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="KEt-PT-Sfy"/>
+                            <constraint firstItem="nTC-Cb-ds5" firstAttribute="top" secondItem="J0t-gZ-yXT" secondAttribute="bottom" constant="65" id="dc7-pd-XT5"/>
+                            <constraint firstItem="eHt-9V-bhx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="giu-RT-ZQw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nTC-Cb-ds5" secondAttribute="trailing" constant="20" id="luP-Qa-Q27"/>
+                            <constraint firstItem="J0t-gZ-yXT" firstAttribute="top" secondItem="jkM-k2-kg7" secondAttribute="bottom" constant="35" id="uOo-m5-Url"/>
+                            <constraint firstItem="J0t-gZ-yXT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="wLJ-bQ-nCD"/>
+                            <constraint firstItem="eHt-9V-bhx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yQc-pl-iX7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtDes" destination="J0t-gZ-yXT" id="ehK-Qz-6L7"/>
+                        <outlet property="txtTitle" destination="jkM-k2-kg7" id="2tf-L1-G6M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
