@@ -54,6 +54,8 @@ class VCListNotes: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @objc func buDeleteNote(_ sender: UIButton){
         // app delegate deletes note instance/object
         context.delete(listNotes[sender.tag])
+        // need to save data
+        AD.saveContext()
         // reload data again
         loadNotes()
     }
