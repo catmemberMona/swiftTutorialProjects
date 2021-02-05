@@ -14,6 +14,8 @@
 		F927AD4E25CB5F5400330AE8 /* MyNotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F927AD4C25CB5F5400330AE8 /* MyNotesApp.xcdatamodeld */; };
 		F927AD5025CB5F5400330AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F927AD4F25CB5F5400330AE8 /* Assets.xcassets */; };
 		F927AD5325CB5F5400330AE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F927AD5125CB5F5400330AE8 /* LaunchScreen.storyboard */; };
+		F927AD5D25CB835400330AE8 /* VCListNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AD5C25CB835400330AE8 /* VCListNotes.swift */; };
+		F927AD6025CB892200330AE8 /* TVCNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AD5F25CB892200330AE8 /* TVCNote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F927AD4F25CB5F5400330AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F927AD5225CB5F5400330AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F927AD5425CB5F5400330AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F927AD5C25CB835400330AE8 /* VCListNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCListNotes.swift; sourceTree = "<group>"; };
+		F927AD5F25CB892200330AE8 /* TVCNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,9 @@
 				F927AD4525CB5F5400330AE8 /* SceneDelegate.swift */,
 				F927AD4725CB5F5400330AE8 /* ViewController.swift */,
 				F927AD4925CB5F5400330AE8 /* Main.storyboard */,
+				F927AD5C25CB835400330AE8 /* VCListNotes.swift */,
 				F927AD4F25CB5F5400330AE8 /* Assets.xcassets */,
+				F927AD5F25CB892200330AE8 /* TVCNote.swift */,
 				F927AD5125CB5F5400330AE8 /* LaunchScreen.storyboard */,
 				F927AD5425CB5F5400330AE8 /* Info.plist */,
 				F927AD4C25CB5F5400330AE8 /* MyNotesApp.xcdatamodeld */,
@@ -140,6 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F927AD5D25CB835400330AE8 /* VCListNotes.swift in Sources */,
+				F927AD6025CB892200330AE8 /* TVCNote.swift in Sources */,
 				F927AD4825CB5F5400330AE8 /* ViewController.swift in Sources */,
 				F927AD4425CB5F5400330AE8 /* AppDelegate.swift in Sources */,
 				F927AD4625CB5F5400330AE8 /* SceneDelegate.swift in Sources */,
