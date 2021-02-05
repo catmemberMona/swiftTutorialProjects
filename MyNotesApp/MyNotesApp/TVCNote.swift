@@ -9,9 +9,11 @@ import UIKit
 
 class TVCNote: UITableViewCell {
 
+    // Outlets variables 
     @IBOutlet weak var laTitle: UILabel!
     @IBOutlet weak var txtDetails: UITextView!
     @IBOutlet weak var laDate: UILabel!
+    @IBOutlet weak var buDelete: UIButton!
     
     
     override func awakeFromNib() {

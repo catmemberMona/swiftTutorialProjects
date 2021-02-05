@@ -43,8 +43,19 @@ class VCListNotes: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let cell: TVCNote = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TVCNote
         
         cell.setNotes(note: listNotes[indexPath.row])
-        return cell
         
+        // functional delete button for individual notes
+        cell.buDelete.tag = indexPath.row
+        cell.buDelete.addTarget(self, action: #selector(buDeleteNote(_:)), for: .touchUpInside)
+        
+        return cell
+    }
+    
+    @objc func buDeleteNote(_ sender: UIButton){
+        // app delegate deletes note instance/object
+        context.delete(listNotes[sender.tag])
+        // reload data again
+        loadNotes()
     }
     
     // retrieve data from core data 

@@ -186,6 +186,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="buDelete" destination="Q1C-Kt-omL" id="zyx-bT-ssO"/>
                                             <outlet property="laDate" destination="6jS-gn-gwg" id="iyH-qa-iMU"/>
                                             <outlet property="laTitle" destination="TyG-RZ-1HX" id="2US-Kh-Zca"/>
                                             <outlet property="txtDetails" destination="sXj-qC-NKm" id="Edc-mW-AeB"/>
