@@ -14,6 +14,7 @@ class TVCNote: UITableViewCell {
     @IBOutlet weak var txtDetails: UITextView!
     @IBOutlet weak var laDate: UILabel!
     @IBOutlet weak var buDelete: UIButton!
+    @IBOutlet weak var buEdit: UIButton!
     
     
     override func awakeFromNib() {

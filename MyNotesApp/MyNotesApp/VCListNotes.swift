@@ -12,9 +12,7 @@ class VCListNotes: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
     // Outlets
     @IBOutlet weak var tvListNotes: UITableView!
-    @IBAction func buBackToAdd(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+
     
     // Variables
     var listNotes = [MyNotes]()
@@ -48,6 +46,10 @@ class VCListNotes: UIViewController, UITableViewDelegate, UITableViewDataSource 
         cell.buDelete.tag = indexPath.row
         cell.buDelete.addTarget(self, action: #selector(buDeleteNote(_:)), for: .touchUpInside)
         
+        // functional edit button for individual notes
+        cell.buEdit.tag = indexPath.row
+        cell.buEdit.addTarget(self, action: #selector(buEditNote(_:)), for: .touchUpInside)
+        
         return cell
     }
     
@@ -59,6 +61,32 @@ class VCListNotes: UIViewController, UITableViewDelegate, UITableViewDataSource 
         // reload data again
         loadNotes()
     }
+    
+    @objc func buEditNote(_ sender: UIButton){
+        // send notes object to add/edit view
+        performSegue(withIdentifier: "AddOrEditSegue", sender: listNotes[sender.tag])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // verify using correct segue
+        if segue.identifier == "AddOrEditSegue" {
+            // verify that destination exists
+            if let addOrEditView = segue.destination as? ViewController {
+                // verify that the note object was recieved
+                if let mynote = sender as? MyNotes {
+                    // assign the note to the edit variable in the view (view controller class)
+                    addOrEditView.EditingNote = mynote
+                }
+            }
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func buAdd(_ sender: Any) {
+        // show add/edit view
+        performSegue(withIdentifier: "AddOrEditSegue", sender: nil)
+    }
+    
     
     // retrieve data from core data 
     func loadNotes(){
