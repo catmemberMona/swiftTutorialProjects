@@ -4,14 +4,14 @@
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="toStore" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ToStore" inverseName="toItems" inverseEntity="ToStore"/>
+        <relationship name="toStore" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoreType" inverseName="toItems" inverseEntity="StoreType"/>
     </entity>
-    <entity name="ToStore" representedClassName="ToStore" syncable="YES" codeGenerationType="class">
+    <entity name="StoreType" representedClassName="StoreType" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="toItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Items" inverseName="toStore" inverseEntity="Items"/>
     </entity>
     <elements>
         <element name="Items" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="ToStore" positionX="-54" positionY="-9" width="128" height="73"/>
+        <element name="StoreType" positionX="175.5078125" positionY="-28.703125" width="128" height="73"/>
     </elements>
 </model>
