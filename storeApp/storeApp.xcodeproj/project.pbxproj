@@ -14,6 +14,7 @@
 		F9AA852925D8A3F500255CE2 /* storeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9AA852725D8A3F500255CE2 /* storeApp.xcdatamodeld */; };
 		F9AA852B25D8A3F600255CE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9AA852A25D8A3F600255CE2 /* Assets.xcassets */; };
 		F9AA852E25D8A3F700255CE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9AA852C25D8A3F700255CE2 /* LaunchScreen.storyboard */; };
+		F9AA853825D8CA3100255CE2 /* VCAddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AA853725D8CA3100255CE2 /* VCAddItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F9AA852A25D8A3F600255CE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9AA852D25D8A3F700255CE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9AA852F25D8A3F700255CE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9AA853725D8CA3100255CE2 /* VCAddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCAddItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				F9AA851E25D8A3F500255CE2 /* AppDelegate.swift */,
+				F9AA853725D8CA3100255CE2 /* VCAddItem.swift */,
 				F9AA852025D8A3F500255CE2 /* SceneDelegate.swift */,
 				F9AA852225D8A3F500255CE2 /* ViewController.swift */,
 				F9AA852425D8A3F500255CE2 /* Main.storyboard */,
@@ -143,6 +146,7 @@
 				F9AA852325D8A3F500255CE2 /* ViewController.swift in Sources */,
 				F9AA851F25D8A3F500255CE2 /* AppDelegate.swift in Sources */,
 				F9AA852125D8A3F500255CE2 /* SceneDelegate.swift in Sources */,
+				F9AA853825D8CA3100255CE2 /* VCAddItem.swift in Sources */,
 				F9AA852925D8A3F500255CE2 /* storeApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
